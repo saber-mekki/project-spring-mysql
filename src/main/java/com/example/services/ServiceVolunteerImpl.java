@@ -17,8 +17,8 @@ public class ServiceVolunteerImpl implements ServiceVolunteer{
 	@Autowired
 	 private VolunteerReprository  volunteerReprository;
 
-	@Autowired
-	private MailService mailService;
+	//@Autowired
+	//private MailService mailService;
 
 	
 	
@@ -45,7 +45,7 @@ public class ServiceVolunteerImpl implements ServiceVolunteer{
 
 	@Override
 	public void register(volunteer Volunteer) {
-		mailService.sendVolunteerEmail(Volunteer);
+	//	mailService.sendVolunteerEmail(Volunteer);
 		Volunteer.setAccepted("waitting");
 		volunteerReprository.save(Volunteer);
 	}
